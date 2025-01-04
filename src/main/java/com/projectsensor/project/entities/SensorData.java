@@ -33,7 +33,7 @@ public class SensorData {
     private float ph1;
     private float ph2;
     private String dispositivo;
-    private String mq2_estado;
+    private float mq2_estado;
 
     private LocalDateTime timestamp = LocalDateTime.now();
 

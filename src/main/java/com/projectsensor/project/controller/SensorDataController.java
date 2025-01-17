@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,11 @@ public class SensorDataController {
     @GetMapping("/find/all")
     public ResponseEntity<List<SensorData>> obtenerTodo() {
         return new ResponseEntity<>(service.obtenerTodos(), HttpStatus.OK); 
+    }
+
+    @GetMapping("/find/{dispositivo}")
+    public ResponseEntity<List<SensorData>> obtenerPorId(@PathVariable String dispositivo) {
+        return new ResponseEntity<>(service.obtenerPorId(dispositivo), HttpStatus.OK); 
     }
 
     @PostMapping("/save")

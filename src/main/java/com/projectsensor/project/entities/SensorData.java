@@ -25,6 +25,7 @@ public class SensorData {
 
     private float temperatura_ambiente;
     private float humedad_relativa;
+    private float humedad;
     private float tempSensor1;
     private float tempSensor2;
     private float co2;
@@ -33,7 +34,7 @@ public class SensorData {
     private float ph1;
     private float ph2;
     private String dispositivo;
-    private float mq2_estado;
+    private float mq2;
 
     private LocalDateTime timestamp = LocalDateTime.now();
 

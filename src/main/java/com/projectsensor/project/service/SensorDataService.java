@@ -26,5 +26,9 @@ public class SensorDataService {
     public SensorData obtenerUltimo() {
         return repository.findTopByOrderByTimestampDesc();
     }
+
+    public List<SensorData> obtenerPorId(String dispositivo) {
+        return repository.findByDispositivo(dispositivo);
+    }
     
 }

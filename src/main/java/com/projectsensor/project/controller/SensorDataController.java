@@ -20,7 +20,7 @@ import com.projectsensor.project.service.SensorDataService;
 @RequestMapping("/sensor")
 @CrossOrigin(origins = "http://localhost:3000")
 public class SensorDataController {
-
+    //fdsf
     @Autowired
     private SensorDataService service;
 

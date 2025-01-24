@@ -41,8 +41,19 @@ public class SensorDataController {
 
     @PostMapping("/save")
     public ResponseEntity<SensorData> guardarRegistro(@RequestBody SensorData data){
-        System.out.println(data.toString());
+        System.out.println(data);
         return new ResponseEntity<>(service.guardar(data), HttpStatus.OK);
     }
+
+    @GetMapping("/find/week")
+    public ResponseEntity<List<SensorData>> traerDataSemana(){
+        return new ResponseEntity<>(service.traerDataSemana(), HttpStatus.OK);
+    }
+
+    @GetMapping("/find/day")
+    public ResponseEntity<List<SensorData>> traerDiario(){
+        return new ResponseEntity<>(service.traerDiario(), HttpStatus.OK);
+    }
+
 
 }

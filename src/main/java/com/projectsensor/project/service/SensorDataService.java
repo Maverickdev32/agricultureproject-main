@@ -30,5 +30,13 @@ public class SensorDataService {
     public List<SensorData> obtenerPorId(String dispositivo) {
         return repository.findByDispositivo(dispositivo);
     }
+
+    public List<SensorData> traerDataSemana() {
+        return repository.findBuscarPorSemana();
+    }
+
+    public List<SensorData> traerDiario() {
+        return repository.findBuscarPorDia();
+    }
     
 }

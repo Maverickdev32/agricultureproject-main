@@ -13,10 +13,10 @@ public interface SensorDataRepository extends JpaRepository<SensorData, Long> {
 
     List<SensorData> findByDispositivo(String dispositivo);
 
-    @Query(value = "SELECT * FROM sensor WHERE timestamp >= NOW() - INTERVAL 7 DAY", nativeQuery = true)
+    @Query(value = "SELECT * FROM sensor WHERE timestamp >= NOW() - INTERVAL 7 DAY AND dispositivo != 'dispositivo_4'", nativeQuery = true)
     public List<SensorData> findBuscarPorSemana();
 
-    @Query(value = "SELECT * FROM sensor WHERE DATE(timestamp) = CURDATE()", nativeQuery = true)
+    @Query(value = "SELECT * FROM sensor WHERE DATE(timestamp) = CURDATE() AND dispositivo != 'dispositivo_4'", nativeQuery = true)
     public List<SensorData> findBuscarPorDia();
 
 }

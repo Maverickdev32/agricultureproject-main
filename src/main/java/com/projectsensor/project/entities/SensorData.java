@@ -38,8 +38,6 @@ public class SensorData {
 
     private LocalDateTime timestamp = LocalDateTime.now();
 
-    // @ManyToOne()
-    // @JoinColumn(name="usuario_id")
-    // private Usuario usuario;
+
 
 }

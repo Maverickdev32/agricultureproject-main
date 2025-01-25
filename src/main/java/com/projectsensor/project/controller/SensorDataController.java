@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projectsensor.project.entities.SensorData;
 import com.projectsensor.project.service.SensorDataService;
 
+//Endpoints a usar para el deploy
+
 @RestController
 @RequestMapping("/sensor")
 public class SensorDataController {
